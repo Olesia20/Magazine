@@ -1,0 +1,47 @@
+.page-sheet {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform 1s ease;
+  transform: rotateY(0deg);
+}
+.page-sheet.is-flipped {
+  transform: rotateY(-180deg);
+}
+.page-front,
+.page-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+.page-front {
+  transform: rotateY(0deg);
+}
+.page-back {
+  transform: rotateY(180deg);
+}
+.blank-page {
+  width: 100%;
+  height: 100%;
+  background: #fbfafa;
+}
+/* .sheet-0 {
+  z-index: 4;
+}
+.sheet-1 {
+  z-index: 3;
+}
+.sheet-2 {
+  z-index: 2;
+}
+.sheet-3 {
+  z-index: 1;
+} */
