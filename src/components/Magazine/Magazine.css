@@ -123,6 +123,9 @@
     overflow: hidden;
     box-sizing: border-box;
   }
+  .magazine-pages.mobile-mode {
+    touch-action: pan-y;
+  }
   .mobile-mode .mobile-static-page > .cover,
   .mobile-mode .mobile-static-page > .introduction,
   .mobile-mode .mobile-sheet .cover,

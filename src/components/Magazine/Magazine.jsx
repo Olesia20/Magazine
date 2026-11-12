@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Magazine.css";
 import Cover from "./pages/Cover";
 import Introduction from "./pages/Introduction";
@@ -12,6 +12,8 @@ function Magazine() {
   const [mobileFlipped, setMobileFlipped] = useState(false);
   const [mobileDirection, setMobileDirection] = useState("next");
   const [mobileAnimating, setMobileAnimating] = useState(false);
+  const touchStartRef = useRef(null);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -117,6 +119,30 @@ function Magazine() {
       setCurrentPage((prev) => Math.max(prev - 1, 0));
     }
   };
+  const handleTouchStart = (event) => {
+    if (!isMobile || mobileAnimating) return;
+    const touch = EventCounts.touches[0];
+    touchStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+    };
+  };
+  const handleTouchEnd = (event) => {
+    if (!isMobile || mobileAnimating || !touchStartRef.current) return;
+    const start = touchStartRef.current;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - start.x;
+    const deltaY = touch.clientY - start.y;
+    touchStartRef.current = null;
+    if (Math.abs(deltaX) < 50 || Math.abs(deltaY) < Math.abs(deltaY) * 1.2) {
+      return;
+    }
+    if (deltaX < O) {
+      nextPage();
+    } else {
+      previousPage();
+    }
+  };
   const handleMobileTransitionEnd = () => {
     if (!mobileFlipped || !mobileAnimating) return;
     setMobilePage((prev) => (mobileDirection === "next" ? prev + 1 : prev - 1));
@@ -127,6 +153,11 @@ function Magazine() {
     <div className="magazine">
       <div
         className={`magazine-pages ${isMobile ? "mobile-mode" : "desktop-mode"}`}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={() => {
+          touchStartRef.current = null;
+        }}
       >
         {isMobile ? (
           <>
