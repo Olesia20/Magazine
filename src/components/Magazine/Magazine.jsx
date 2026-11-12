@@ -121,7 +121,7 @@ function Magazine() {
   };
   const handleTouchStart = (event) => {
     if (!isMobile || mobileAnimating) return;
-    const touch = EventCounts.touches[0];
+    const touch = event.touches[0];
     touchStartRef.current = {
       x: touch.clientX,
       y: touch.clientY,
@@ -134,10 +134,10 @@ function Magazine() {
     const deltaX = touch.clientX - start.x;
     const deltaY = touch.clientY - start.y;
     touchStartRef.current = null;
-    if (Math.abs(deltaX) < 50 || Math.abs(deltaY) < Math.abs(deltaY) * 1.2) {
+    if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) {
       return;
     }
-    if (deltaX < O) {
+    if (deltaX < 0) {
       nextPage();
     } else {
       previousPage();
