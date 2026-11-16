@@ -148,10 +148,6 @@
       10px 10px 12px rgba(27, 26, 26, 0.18),
       -5px -5px 10px rgba(255, 255, 255, 0.35);
   }
-  .mobile-mode .mobile-sheet {
-    transform: none;
-
-  }
   .page-controls {
     margin-top: 20px;
   }
