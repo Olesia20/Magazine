@@ -13,6 +13,7 @@
   height: 650px;
   transform-style: preserve-3d;
 }
+
 .magazine-spread {
   display: flex;
   align-items: stretch;
@@ -28,7 +29,7 @@
   color: #252525;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 8px 18px rgba(40, 30, 20, 0.22);
 }
 .cover h1 {
   font-size: 45px;
@@ -107,6 +108,7 @@
   font-weight: normal;
   margin-top: 50px;
 }
+
 @media (max-width: 768px) {
   .magazine {
     min-height: 100dvh;
@@ -142,10 +144,18 @@
     width: 100%;
     right: auto;
     left: 0;
+    box-shadow:
+      10px 10px 12px rgba(27, 26, 26, 0.18),
+      -5px -5px 10px rgba(255, 255, 255, 0.35);
+  }
+  .mobile-mode .mobile-sheet {
+    transform: none;
+    filter: drop-shadow(5px 6px 10px rgba(40, 30, 20, 0.22));
   }
   .page-controls {
     margin-top: 20px;
   }
+
   .mobile-mode .cover,
   .mobile-mode .introduction {
     width: 100%;
