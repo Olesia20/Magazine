@@ -150,7 +150,7 @@
   }
   .mobile-mode .mobile-sheet {
     transform: none;
-    filter: drop-shadow(5px 6px 10px rgba(40, 30, 20, 0.22));
+
   }
   .page-controls {
     margin-top: 20px;
