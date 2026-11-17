@@ -211,7 +211,7 @@ function Magazine() {
           }
           aria-label="Previous page"
         >
-          &#8592;
+        
         </button>
         <button
           className="page-arrow"
@@ -223,7 +223,7 @@ function Magazine() {
           }
           aria-label="Next page"
         >
-          &#8594;
+        
         </button>
       </div>
     </div>

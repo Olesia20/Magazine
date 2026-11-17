@@ -3,14 +3,15 @@
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #e8e2d9;
+  background: #f4f4f3;
   perspective: 2000px;
   transform-style: preserve-3d;
+  flex-direction: column;
 }
 .magazine-pages {
   position: relative;
-  width: 1000px;
-  height: 650px;
+  width: 1150px;
+  height: 750px;
   transform-style: preserve-3d;
 }
 
@@ -21,15 +22,15 @@
   gap: 0;
 }
 .cover {
-  width: 500px;
-  height: 650px;
+  width: 575px;
+  height: 750px;
   padding: 30px;
   box-sizing: border-box;
-  background: #f8f4ed;
+  background: #fbfbfa;
   color: #252525;
   display: flex;
   justify-content: space-between;
-  box-shadow: 4px 8px 18px rgba(40, 30, 20, 0.22);
+  /* box-shadow: 4px 8px 18px rgba(40, 30, 20, 0.22); */
 }
 .cover h1 {
   font-size: 45px;
@@ -44,29 +45,51 @@
   height: 650px;
   padding: 30px;
   box-sizing: border-box;
-  background: #f8f4ed;
+  background: #fbfbfa;
   color: #252525;
-  box-shadow: 5px 10px 38px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 5px 10px 38px rgba(0, 0, 0, 0.15); */
 }
 .page-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  margin-top: 25px;
+  gap: 28px;
+  margin-top: 30px;
 }
 .page-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid #b7aa98;
-  border-radius: 50%;
+  border: none;
   background: transparent;
-  color: #252525;
-  font-size: 24px;
+  color: #927e68;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+}
+.page-arrow::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+.page-arrow:first-child::before {
+  transform: rotate(225deg);
+}
+.page-arrow:last-child::before {
+  transform: rotate(45deg);
 }
 .page-arrow:hover:not(:disabled) {
+  color: #252525;
+  transform: scale(1.2);
+}
+.page-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+/* .page-arrow:hover:not(:disabled) {
   background: #252525;
   color: #f8f4ed;
   border-color: #252525;
@@ -74,13 +97,13 @@
 .page-arrow:disabled {
   opacity: 0.3;
   cursor: default;
-}
+} */
 .magazine-page-content {
   width: 100%;
   height: 100%;
   padding: 40px;
   box-sizing: border-box;
-  background: #f8f4ed;
+  background: #fbfbfa;
   color: #252525;
   overflow: hidden;
   position: relative;
@@ -116,14 +139,21 @@
     box-sizing: border-box;
     flex-direction: column;
   }
+
   .mobile-mode .mobile-static-page {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
+  }
+  .mobile-mode .mobile-static-page .magazine-page-content {
+    box-shadow: 5px 8px 24px rgb(7, 7, 7);
+  }
+  .mobile-mode .mobile-sheet .magazine-page-content {
+    box-shadow: 5px 8px 20px rgba(40, 30, 20, 0.22);
   }
   .mobile-mode .mobile-sheet {
     transform: none;
@@ -147,9 +177,6 @@
     width: 100%;
     right: auto;
     left: 0;
-    box-shadow:
-      10px 10px 12px rgba(27, 26, 26, 0.18),
-      -5px -5px 10px rgba(255, 255, 255, 0.35);
   }
   .page-controls {
     margin-top: 20px;
@@ -174,13 +201,5 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-  }
-  .mobile-mode .mobile-sheet.is-flipped {
-    transform-origin: left center;
-    animation: mobileFlipNext 1s ease forwards;
-  }
-  .mobile-mode .mobile-sheet.mobile-sheet.is-flipped-back {
-    transform: rigth center;
-    animation: mobileFlipPrev 1s ease forwards;
   }
 }
