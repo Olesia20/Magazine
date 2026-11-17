@@ -43,7 +43,7 @@ function Magazine() {
       back: (
         <MagazinePage
           subtitle="The Beginning"
-          title="Fashion History"
+          title="FASHION HISTORY"
           description="A journey through the evolution of Fashion."
           pageNumber={4}
           side="left"
@@ -210,9 +210,7 @@ function Magazine() {
             isMobile ? mobilePage === 0 || mobileAnimating : currentPage === 0
           }
           aria-label="Previous page"
-        >
-        
-        </button>
+        ></button>
         <button
           className="page-arrow"
           onClick={nextPage}
@@ -222,9 +220,7 @@ function Magazine() {
               : currentPage === pages.length
           }
           aria-label="Next page"
-        >
-        
-        </button>
+        ></button>
       </div>
     </div>
   );
