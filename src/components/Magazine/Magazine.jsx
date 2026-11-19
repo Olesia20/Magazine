@@ -4,6 +4,7 @@ import Cover from "./pages/Cover";
 import Introduction from "./pages/Introduction";
 import PageSheet from "./PageSheet";
 import MagazinePage from "./pages/MagazinePage";
+import CenteredImageWrap from "./layouts/CenteredImageWrap";
 
 function Magazine() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -13,6 +14,12 @@ function Magazine() {
   const [mobileDirection, setMobileDirection] = useState("next");
   const [mobileAnimating, setMobileAnimating] = useState(false);
   const touchStartRef = useRef(null);
+  const [cursorPosition, setCursorPosition] = useState({
+    x: 0,
+    y: 0,
+    visible: false,
+    direction: "next",
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,13 +48,14 @@ function Magazine() {
       id: 2,
       front: <Introduction pageNumber={3} />,
       back: (
-        <MagazinePage
-          subtitle="The Beginning"
-          title="FASHION HISTORY"
-          description="A journey through the evolution of Fashion."
-          pageNumber={4}
-          side="left"
-        />
+        // <MagazinePage
+        //   subtitle="The Beginning"
+        //   title="FASHION HISTORY"
+        //   description="A journey through the evolution of Fashion."
+        //   pageNumber={4}
+        //   side="left"
+        // />
+        <CenteredImageWrap pageNumber={4} side="right" />
       ),
     },
     {
@@ -119,6 +127,29 @@ function Magazine() {
       setCurrentPage((prev) => Math.max(prev - 1, 0));
     }
   };
+
+  const handlePageClick = (event) => {
+    if (isMobile) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    if (clickX > rect.width / 2) {
+      nextPage();
+    } else {
+      previousPage();
+    }
+  };
+  const handleMauseMove = (event) => {
+    if (isMobile) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    setCursorPosition({
+      x,
+      y,
+      visible: true,
+      direction: x > rect.width / 2 ? "next" : "prev",
+    });
+  };
   const handleTouchStart = (event) => {
     if (!isMobile || mobileAnimating) return;
     const touch = event.touches[0];
@@ -153,6 +184,11 @@ function Magazine() {
     <div className="magazine">
       <div
         className={`magazine-pages ${isMobile ? "mobile-mode" : "desktop-mode"}`}
+        onMouseMove={handleMauseMove}
+        onMouseLeave={() =>
+          setCursorPosition((prev) => ({ ...prev, visible: false }))
+        }
+        onClick={handlePageClick}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchCancel={() => {
@@ -202,6 +238,17 @@ function Magazine() {
           ))
         )}
       </div>
+      {!isMobile && cursorPosition.visible && (
+        <div
+          className={`page-cursor ${cursorPosition.direction}`}
+          style={{
+            left: cursorPosition.x + 130,
+            top: cursorPosition.y + 50,
+          }}
+        >
+          {cursorPosition.direction === "next" ? "NEXT>>" : "<<PREV"}
+        </div>
+      )}
       <div className="page-controls">
         <button
           className="page-arrow"

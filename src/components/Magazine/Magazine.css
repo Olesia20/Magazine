@@ -180,6 +180,28 @@
   font-weight: normal;
   margin-top: 20px;
 }
+.page-cursor {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(248, 244, 237, 0.92);
+  color: #927e68;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+.page-cursor.prev {
+  border-radius: 50%;
+}
+.page-cursor.next {
+  border-radius: 50%;
+}
 
 @media (max-width: 768px) {
   .magazine {
