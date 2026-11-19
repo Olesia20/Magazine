@@ -5,6 +5,7 @@ import Introduction from "./pages/Introduction";
 import PageSheet from "./PageSheet";
 import MagazinePage from "./pages/MagazinePage";
 import CenteredImageWrap from "./layouts/CenteredImageWrap";
+import translation from "../../translation/translation";
 
 function Magazine() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -14,6 +15,8 @@ function Magazine() {
   const [mobileDirection, setMobileDirection] = useState("next");
   const [mobileAnimating, setMobileAnimating] = useState(false);
   const touchStartRef = useRef(null);
+  const [language, setLanguage] = useState("en");
+  const t = translation[language];
   const [cursorPosition, setCursorPosition] = useState({
     x: 0,
     y: 0,
@@ -41,12 +44,12 @@ function Magazine() {
   const pages = [
     {
       id: 1,
-      front: <Cover />,
+      front: <Cover language={language} />,
       back: <div className="blank-page"></div>,
     },
     {
       id: 2,
-      front: <Introduction pageNumber={3} />,
+      front: <Introduction pageNumber={3} language={language} />,
       back: (
         // <MagazinePage
         //   subtitle="The Beginning"
@@ -55,7 +58,7 @@ function Magazine() {
         //   pageNumber={4}
         //   side="left"
         // />
-        <CenteredImageWrap pageNumber={4} side="right" />
+        <CenteredImageWrap pageNumber={4} side="right" language={language} />
       ),
     },
     {
@@ -182,6 +185,21 @@ function Magazine() {
   };
   return (
     <div className="magazine">
+      <div className="language-switcher">
+        <button
+          className={language === "en" ? "active" : ""}
+          onClick={() => setLanguage("en")}
+        >
+          EN
+        </button>
+        <span>|</span>
+        <button
+          className={language === "ua" ? "active" : ""}
+          onClick={() => setLanguage("ua")}
+        >
+          UA
+        </button>
+      </div>
       <div
         className={`magazine-pages ${isMobile ? "mobile-mode" : "desktop-mode"}`}
         onMouseMove={handleMauseMove}

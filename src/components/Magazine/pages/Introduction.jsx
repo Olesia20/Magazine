@@ -1,10 +1,12 @@
 import "./Introduction.css";
-function Introduction({ pageNumber }) {
+import translation from "../../../translation/translation";
+function Introduction({ pageNumber, language }) {
+  const t = translation[language];
   return (
-    <div className="introduction">
-      <p>THE WORLLD OF FASHION</p>
-      <h2>FASHION IS A STORY</h2>
-      <p>A journey through creativity, history and timless style.</p>
+    <div className={`introduction ${language}`}>
+      <p className="introdactiontTitle">{t.introSubtitle}</p>
+      <h2>{t.introTitle}</h2>
+      <p>{t.introDescription}</p>
       <span className="page-number right">{pageNumber}</span>
     </div>
   );

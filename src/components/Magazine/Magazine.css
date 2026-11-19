@@ -58,6 +58,11 @@
   color: #f4f4f3;
   z-index: 2;
 }
+.cover-image-text.ua {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .cover h1 {
   font-family: "Bodoni Moda", serif;
   /* font-optical-sizing: auto; */
@@ -201,6 +206,28 @@
 }
 .page-cursor.next {
   border-radius: 50%;
+}
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.language-switcher button {
+  border: none;
+  background: none;
+  color: #927e68;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  opacity: 0.5;
+}
+.language-switcher button.active {
+  opacity: 1;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

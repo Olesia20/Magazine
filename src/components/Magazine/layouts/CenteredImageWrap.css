@@ -46,3 +46,20 @@
 .wrap-bottom-text {
   margin-top: 2px;
 }
+/* Ukrainian version */
+.centered-image-wrap.ua .wrap-top-text,
+.centered-image-wrap.ua .wrap-bottom-text,
+.centered-image-wrap.ua .wrap-middle p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.centered-image-wrap.ua .wrap-image img {
+  height: 400px;
+}
+.centered-image-wrap.ua .wrap-bottom-text {
+  margin-bottom: 15px;
+}
