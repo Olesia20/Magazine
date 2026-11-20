@@ -1,0 +1,67 @@
+.site-header {
+  width: 100%;
+  background: #f8f4ed;
+  color: #30251f;
+  padding: 25px 40px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d8cbbd;
+}
+.header-top {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+.header-edition,
+.header-issue {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #927e68;
+}
+.header-logo {
+  font-family: "Bodoni Moda", serif;
+  font-size: 55px;
+  font-weight: 500;
+  letter-spacing: 35px;
+  margin: 10px 0;
+}
+.headre-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 15px 0;
+  border-top: 1px solid #e5dbd0;
+}
+.headre-nav a,
+.headre-nav button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #55483e;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.headre-nav a:hover,
+.headre-nav button:hover {
+  color: #a36b50;
+}
+@media (max-width: 600px) {
+  .site-header {
+    padding: 20px 12px 0;
+  }
+  .header-logo {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .headre-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .headre-nav a,
+  .headre-nav button {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}

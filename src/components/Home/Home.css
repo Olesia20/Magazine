@@ -1,0 +1,119 @@
+.home-page {
+  min-height: 100vh;
+  background: #f8f4ed;
+  color: #30251f;
+  padding: 65px 7%;
+  box-sizing: border-box;
+}
+.home-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 75px;
+}
+.home-overline,
+.section-heading span {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #927e68;
+}
+.home-intro h2 {
+  font-family: "Bodoni Mode", serif;
+  font-size: 48px;
+  line-height: 1.8;
+  color: #786b60;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.section-heading h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minimax(0, 1fr));
+  gap: 35px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.issue-cover {
+  cursor: pointer;
+  text-align: center;
+}
+.issue-cover {
+  min-height: 440px;
+  padding: 35px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(50, 35, 25, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.issue-card:hover .issue-cover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(50 35, 25, 0.18);
+}
+.issue-card:hover .issue-cover {
+  background: #eee3d6;
+  color: #702f32;
+}
+.dior-cover {
+  background: #e5ded4;
+  color: #30251f;
+}
+.cover-number {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+.issue-cover h3 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 43px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.issue-cover p {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+.issue-title {
+  font-family: "Bodoni Mode", serif;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 22px 0 8px;
+}
+.issue-category {
+  font-family: "Lato", sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #927e68;
+}
+@media (max-width: 650px) {
+  .home-page {
+    padding: 45px 20px;
+  }
+  .home-intro {
+    margin-bottom: 50px;
+  }
+  .home-intro h2 {
+    font-size: 35px;
+  }
+  .issue-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 400px;
+  }
+  .issue-cover {
+    min-height: 420px;
+  }
+}
