@@ -1,12 +1,14 @@
 .site-header {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background: #f8f4ed;
+  background: #f4f4f3;
   color: #30251f;
-  padding: 25px 40px 0;
   box-sizing: border-box;
-  border-bottom: 1px solid #d8cbbd;
+  /* outline: 2px solid blue; */
 }
 .header-top {
+  margin-top: -15px;
   text-align: center;
   position: relative;
   padding-bottom: 20px;
@@ -24,17 +26,24 @@
   font-weight: 500;
   letter-spacing: 35px;
   margin: 10px 0;
+  border-bottom: 1px solid #d8cbbd;
 }
-.headre-nav {
+.header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
+  background: #f4f4f3;
   justify-content: center;
   align-items: center;
   gap: 45px;
-  padding: 15px 0;
-  border-top: 1px solid #e5dbd0;
+  margin: 0;
+  /* outline: 2px solid red; */
+  /* padding: 10px 0; */
+  /* border-top: 1px solid #e5dbd0; */
 }
-.headre-nav a,
-.headre-nav button {
+.header-nav a,
+.header-nav button {
   background: none;
   border: none;
   text-decoration: none;
@@ -43,8 +52,24 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
-.headre-nav a:hover,
-.headre-nav button:hover {
+.header-nav a:hover,
+.header-nav button:hover {
+  color: #a36b50;
+}
+.language-switcher {
+  padding-top: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+.language-switcher button {
+  padding: 4px;
+  opacity: 0.55;
+}
+.language-switcher button.active {
+  opacity: 1;
+  font-weight: 700;
   color: #a36b50;
 }
 @media (max-width: 600px) {
@@ -55,12 +80,12 @@
     font-size: 25px;
     letter-spacing: 2px;
   }
-  .headre-nav {
+  .header-nav {
     gap: 16px;
     flex-wrap: wrap;
   }
-  .headre-nav a,
-  .headre-nav button {
+  .header-nav a,
+  .header-nav button {
     font-size: 9px;
     letter-spacing: 1px;
   }

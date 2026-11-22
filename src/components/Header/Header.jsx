@@ -1,22 +1,35 @@
 import "./Header.css";
 
-function Header({ onHome }) {
+function Header({ onHome, language, setLanguage }) {
   return (
-    <header className="site-header">
-      <p className="header-issue">NON COMERTION PROJECT</p>
-      <div className="header-top">
-        {/* <p className="header-edition">THE WORLD OF STYLE</p> */}
-
-        <h1 className="header-logo">MAGAZINE</h1>
-      </div>
-      <nav className="headre-nav">
+    <>
+      <nav className="header-nav">
         <button onClick={onHome}>HOME</button>
         <a href="#issues">ISSUES</a>
         <a href="#fashion">FASHION</a>
-        <a href="#lifestyle">LIFESTYLE</a>
         <a href="#culture">CULTURE</a>
+        <div className="language-switcher">
+          <button
+            className={language === "en" ? "active" : ""}
+            onClick={() => setLanguage("en")}
+          >
+            EN
+          </button>
+          <span>|</span>
+          <button
+            className={language === "ua" ? "active" : ""}
+            onClick={() => setLanguage("ua")}
+          >
+            UA
+          </button>
+        </div>
       </nav>
-    </header>
+      <header className="site-header">
+        <div className="header-top">
+          <h1 className="header-logo">MAGAZINE</h1>
+        </div>
+      </header>
+    </>
   );
 }
 export default Header;

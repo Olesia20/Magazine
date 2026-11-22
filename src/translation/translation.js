@@ -21,7 +21,14 @@ const translation = {
       "Although his parents had hopes of him becoming a diplomat, Dior was artistically inclined and began to sell his sketches on the street to make pocket money. Upon leaving school, Dior took over a small art gallery which his father bought for him, where he and a friend sold work by artists including Pablo Picasso.",
     diorBottom:
       "From the outset, Christian Dior established himself as a major figure of French fashion represented by designs that immediately transcended borders. The international press was enthralled, the silhouettes circulated, and subsidiaries were opened in major cities round the world, from New York to Caracas in Venezuela.",
-    // 5-page
+    // Home page
+    homeSubtitle: "EXPLORE OUR WORLD",
+    homeTitle: "Latest Issues",
+    christmasTitle: "A Ukrainian Christmas Story",
+    christmasCategory: "CULTURE / TRADITIONS / FOOD",
+    diorIssueTitle: "The House of Dior",
+    diorCategory: "FASHION / HISTORY / ICONS",
+    comingSoon: "COMING SOON",
   },
   ua: {
     //   cover
@@ -43,7 +50,14 @@ const translation = {
       "Хоча батьки сподівалися, що він стане дипломатом, Діор мав хист до мистецтва й почав продавати свої ескізи просто на вулиці, щоб заробити кишенькові гроші. Після закінчення навчання він очолив невелику художню галерею, яку батько придбав для нього. Там разом із другом вони продавали роботи художників, серед яких був і Пабло Пікассо.",
     diorBottom:
       "Від самого початку Крістіан Діор став однією з провідних постатей французької моди. Його дизайни швидко вийшли за межі Франції та завоювали міжнародне визнання. Міжнародна преса захоплено писала про нові силуети, а представництва бренду відкривалися у великих містах світу — від Нью-Йорка до Каракаса у Венесуелі.",
-    // 5-page
+    // Home page
+    homeSubtitle: "ВІДКРИЙТЕ НАШ СВІТ",
+    homeTitle: "Останні випуски",
+    christmasTitle: "Українська різдвяна історія",
+    christmasCategory: "КУЛЬТУРА / ТРАДИЦІЇ / КУХНЯ",
+    diorIssueTitle: "Історія дому Dior",
+    diorCategory: "МОДА / ІСТОРІЯ / ІКОНИ",
+    comingSoon: "НЕЗАБАРОМ",
   },
 };
 export default translation;

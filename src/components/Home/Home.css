@@ -1,6 +1,6 @@
 .home-page {
   min-height: 100vh;
-  background: #f8f4ed;
+  background: #f8f6f3;
   color: #30251f;
   padding: 65px 7%;
   box-sizing: border-box;
@@ -17,6 +17,39 @@
   letter-spacing: 3px;
   color: #927e68;
 }
+.section-heading.ua h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.christmas-cover.ua h3 {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 15px;
+}
+.issue-title.ua h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.issue-title.ua p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+.issue-title.ua span {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.issues-section h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
 .home-intro h2 {
   font-family: "Bodoni Mode", serif;
   font-size: 48px;
@@ -59,10 +92,10 @@
 }
 .issue-card:hover .issue-cover {
   transform: translateY(-7px);
-  box-shadow: 0 14px 30px rgba(50 35, 25, 0.18);
+  box-shadow: 0 14px 30px rgba(50, 35, 25, 0.18);
 }
 .issue-card:hover .issue-cover {
-  background: #eee3d6;
+  background: #ebe5df;
   color: #702f32;
 }
 .dior-cover {

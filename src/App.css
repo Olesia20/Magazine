@@ -2,15 +2,19 @@
   min-height: 100vh;
 }
 .back-to-home {
-  position: absolute;
-  top: 20px;
-  left: 25px;
+  margin-top: -35px;
+  position: relative;
+  display: block;
+  top: 45px;
+  left: 10px;
   z-index: 100;
-  background: #f8f4ed;
-  border: 1px solid #d8cbbd;
+  background: #eae5dc;
+  border: none;
+  border-radius: 10px;
   padding: 10px 16px;
-  color: #55483e;
+  color: #554d3e;
   cursor: pointer;
   font-size: 10px;
   letter-spacing: 1px;
+  box-shadow: 0 14px 30px rgba(50, 35, 25, 0.18);
 }

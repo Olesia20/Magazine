@@ -5,9 +5,9 @@ import Introduction from "./pages/Introduction";
 import PageSheet from "./PageSheet";
 import MagazinePage from "./pages/MagazinePage";
 import CenteredImageWrap from "./layouts/CenteredImageWrap";
-import translation from "../../translation/translation";
+// import translation from "../../translation/translation";
 
-function Magazine() {
+function Magazine({ language }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [mobilePage, setMobilePage] = useState(0);
@@ -15,8 +15,8 @@ function Magazine() {
   const [mobileDirection, setMobileDirection] = useState("next");
   const [mobileAnimating, setMobileAnimating] = useState(false);
   const touchStartRef = useRef(null);
-  const [language, setLanguage] = useState("en");
-  const t = translation[language];
+  // const [language, setLanguage] = useState("en");
+  // const t = translation[language];
   const [cursorPosition, setCursorPosition] = useState({
     x: 0,
     y: 0,
@@ -185,7 +185,7 @@ function Magazine() {
   };
   return (
     <div className="magazine">
-      <div className="language-switcher">
+      {/* <div className="language-switcher">
         <button
           className={language === "en" ? "active" : ""}
           onClick={() => setLanguage("en")}
@@ -199,7 +199,7 @@ function Magazine() {
         >
           UA
         </button>
-      </div>
+      </div> */}
       <div
         className={`magazine-pages ${isMobile ? "mobile-mode" : "desktop-mode"}`}
         onMouseMove={handleMauseMove}
