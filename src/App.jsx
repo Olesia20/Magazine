@@ -42,7 +42,7 @@ function App() {
       ) : (
         <>
           <button className="back-to-home" onClick={() => setActiveIssue(null)}>
-            BACK
+            ← BACK
           </button>
           <ChristmasMagazine language={language} />
         </>
