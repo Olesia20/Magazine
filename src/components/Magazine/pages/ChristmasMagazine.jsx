@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import "../Magazine.css";
 import "../PageSheet.css";
 import "./ChristmasMagazine.css";
-
 import ChristmasCover from "./ChristmasCover";
 import PageSheet from "../PageSheet";
+import ChristmasIntroduction from "./ChristmasIntroduction";
 
 function ChristmasPage({ subtitle, title, description, pageNumber, language }) {
   return (
@@ -61,15 +61,7 @@ function ChristmasMagazine({ language }) {
     },
     {
       id: 2,
-      front: (
-        <ChristmasPage
-          subtitle="THE MAGIC OF CHRISTMAS"
-          title="A Ukrainian Christmas"
-          description="A story of traditions, family and the magic that brings generations together."
-          pageNumber={3}
-          language={language}
-        />
-      ),
+      front: <ChristmasIntroduction language={language} pageNumber={3} />,
       back: (
         <ChristmasPage
           subtitle="OUR HERITAGE"

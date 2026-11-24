@@ -28,6 +28,34 @@
   );
   pointer-events: none;
 }
+.christmas-cover-page.ua .christmas-cover-title {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.christmas-cover-page.ua .christmas-issue-number {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 5px;
+}
+.christmas-cover-page.ua .christmas-cover-subtitle {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.christmas-cover-page.ua .christmas-cover-credit {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
 /* Номер випуску */
 .christmas-issue-number {
   position: absolute;

@@ -1,4 +1,6 @@
 import translation from "../../translation/translation";
+import ChristmasCover from "../Magazine/pages/ChristmasCover";
+import Cover from "../Magazine/pages/Cover";
 import "./Home.css";
 
 function Home({ onOpenIssue, language }) {
@@ -23,25 +25,10 @@ function Home({ onOpenIssue, language }) {
             className="issue-card christmas-card"
             onClick={() => onOpenIssue("christmas")}
           >
-            <div className={`issue-cover christmas-cover ${language}`}>
-              <span className="cover-number">ISSUE 01 / 2026</span>
-              <h3>
-                {language === "en" ? (
-                  <>
-                    A CHRISTMAS
-                    <br />
-                    TALE
-                  </>
-                ) : (
-                  <>
-                    РІЗДВЯНА
-                    <br />
-                    КАЗКА
-                  </>
-                )}
-              </h3>
-              <p>UKRAINIAN CHRISTMAS STORY</p>
+            <div className="issue-cover-preview christmas-preview">
+              <ChristmasCover language={language} />
             </div>
+            
             <div className={`issue-title ${language}`}>
               <h3>{t.christmasTitle}</h3>
               <p className="issue-category">{t.christmasCategory}</p>
@@ -52,14 +39,8 @@ function Home({ onOpenIssue, language }) {
             className="issue-card dior-card"
             onClick={() => onOpenIssue("dior")}
           >
-            <div className={`issue-cover dior-cover ${language}`}>
-              <span className="cover-number">ISSUE 02 / 2026</span>
-              <h3>
-                {" "}
-                THE HOUSE
-                <br /> OF DIOR
-              </h3>
-              <p> THE STORY OF A LEGEND</p>
+            <div className="issue-cover-preview dior-preview">
+              <Cover language={language} />
             </div>
             <div className={`issue-title ${language}`}>
               <h3>{t.diorIssueTitle}</h3>

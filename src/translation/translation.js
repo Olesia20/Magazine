@@ -29,6 +29,15 @@ const translation = {
     diorIssueTitle: "The House of Dior",
     diorCategory: "FASHION / HISTORY / ICONS",
     comingSoon: "COMING SOON",
+    christmasIntroSubtitle: "INTRODUCTION",
+    christmasIntroTitle: "THE MAGIC OF CHRISTMAS",
+    olenaName: "OLENA PCHILKA (1849-1930)",
+    olenaBiography:
+      "Her real name was Olha Petrivna Kosach, née Drahomanova. She was a Ukrainian writer, ethnographer, folklorist and cultural activist, as well as the mother of the renowned poet Lesya Ukrainka. She devoted her life to preserving Ukrainian identity: collecting folk songs, traditions and embroidery patterns, studying Ukrainian ornaments and promoting national art. Her publications Ukrainian Ornament and Ukrainian Patterns made a significant contribution to preserving Ukraine's cultural heritage.",
+    christmasIntroText:
+      "We invite you on a fascinating journey into the world of Ukrainian attire, traditions and Christmas magic. Throughout the pages of this issue, Ukrainian traditional dress comes to life — its elegance, symbolism and timeless beauty. A special place in this story belongs to Olena Pchilka — a writer, ethnographer and one of the women who helped restore Ukrainian folk dress to its rightful place in culture, transforming it into a source of inspiration and fashion. We also invite you to experience the magic of Ukrainian Christmas: discover the world of the Vertep nativity play and traditional carols, explore ancient customs and learn about the dishes of Sviat Vechir, around which Ukrainian families have gathered for generations. This is a story of beauty, heritage and traditions that continue to live on in our culture through the centuries.",
+    christmasIntroClosing:
+      "Enjoy reading, and may your Christmas be bright and joyful!",
   },
   ua: {
     //   cover
@@ -58,6 +67,12 @@ const translation = {
     diorIssueTitle: "Історія дому Dior",
     diorCategory: "МОДА / ІСТОРІЯ / ІКОНИ",
     comingSoon: "НЕЗАБАРОМ",
+    christmasIntroSubtitle: "ВСТУП",
+    christmasIntroTitle: "МАГІЯ РІЗДВА",
+      olenaName:"ОЛЕНА ПЧІЛКА (1849-1930)",
+    olenaBiography: "Справжнє ім’я — Ольга Петрівна Косач, уроджена Драгоманова. Українська письменниця, етнографиня, фольклористка та культурна діячка, мати Лесі Українки. Вона присвятила життя збереженню української самобутності: збирала народні пісні, звичаї та зразки вишивки, досліджувала український орнамент і популяризувала національне мистецтво. Її праці «Український орнамент» та «Українські узори» стали вагомим внеском у збереження української культурної спадщини.",
+      christmasIntroText: "Запрошуємо вас у захопливу подорож світом українського вбрання, традицій та різдвяного дива. На сторінках цього випуску оживає український костюм — його витонченість, символіка та неповторна краса. Особливе місце в цій історії посідає Олена Пчілка — письменниця, етнографиня та одна з тих, хто повертав українському народному вбранню належне місце в культурі, перетворюючи його на джерело натхнення та моди. Ми також запрошуємо вас відчути магію українського Різдва: зазирнути у світ вертепу й колядок, відкрити давні звичаї та познайомитися зі стравами Святвечора, за якими поколіннями збиралися українські родини. Це історія про красу, пам’ять і традиції, які крізь століття продовжують жити в нашій культурі.",
+    christmasIntroClosing: "Приємного читання та світлого Різдва!"
   },
 };
 export default translation;
