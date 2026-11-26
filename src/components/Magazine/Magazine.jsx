@@ -7,7 +7,7 @@ import MagazinePage from "./pages/MagazinePage";
 import CenteredImageWrap from "./layouts/CenteredImageWrap";
 // import translation from "../../translation/translation";
 
-function Magazine({ language }) {
+function Magazine({ language, onHome }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [mobilePage, setMobilePage] = useState(0);
@@ -268,8 +268,11 @@ function Magazine({ language }) {
         </div>
       )}
       <div className="page-controls">
+        <button className="back-to-home" onClick={onHome}>
+          ← BACK
+        </button>
         <button
-          className="page-arrow"
+          className="page-arrow previous-arrow"
           onClick={previousPage}
           disabled={
             isMobile ? mobilePage === 0 || mobileAnimating : currentPage === 0
@@ -277,7 +280,7 @@ function Magazine({ language }) {
           aria-label="Previous page"
         ></button>
         <button
-          className="page-arrow"
+          className="page-arrow next-arrow"
           onClick={nextPage}
           disabled={
             isMobile

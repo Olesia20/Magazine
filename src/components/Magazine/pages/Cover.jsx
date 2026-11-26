@@ -1,10 +1,10 @@
 import FashionImage from "../../../assets/images/dior.jpg";
 import translation from "../../../translation/translation";
 
-function Cover({ language }) {
+function Cover({ language, preview = false }) {
   const t = translation[language];
   return (
-    <div className={`cover ${language}`}>
+    <div className={`cover ${language} ${preview ? "cover-preview" : ""}`}>
       <h1>MAGAZINE</h1>
       <p>{t.coverTitle}</p>
       <div className="cover-image">

@@ -28,7 +28,7 @@ function Home({ onOpenIssue, language }) {
             <div className="issue-cover-preview christmas-preview">
               <ChristmasCover language={language} />
             </div>
-            
+
             <div className={`issue-title ${language}`}>
               <h3>{t.christmasTitle}</h3>
               <p className="issue-category">{t.christmasCategory}</p>
@@ -40,7 +40,7 @@ function Home({ onOpenIssue, language }) {
             onClick={() => onOpenIssue("dior")}
           >
             <div className="issue-cover-preview dior-preview">
-              <Cover language={language} />
+              <Cover language={language} preview={true} />
             </div>
             <div className={`issue-title ${language}`}>
               <h3>{t.diorIssueTitle}</h3>

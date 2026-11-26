@@ -34,17 +34,20 @@ function App() {
         <Home onOpenIssue={setActiveIssue} language={language} />
       ) : activeIssue === "dior" ? (
         <>
-          <button className="back-to-home" onClick={() => setActiveIssue(null)}>
+          {/* <button className="back-to-home" onClick={() => setActiveIssue(null)}>
             ← BACK
-          </button>
-          <Magazine language={language} />
+          </button> */}
+          <Magazine language={language} onHome={() => setActiveIssue(null)} />
         </>
       ) : (
         <>
-          <button className="back-to-home" onClick={() => setActiveIssue(null)}>
+          {/* <button className="back-to-home" onClick={() => setActiveIssue(null)}>
             ← BACK
-          </button>
-          <ChristmasMagazine language={language} />
+          </button> */}
+          <ChristmasMagazine
+            language={language}
+            onHome={() => setActiveIssue(null)}
+          />
         </>
       )}
     </div>

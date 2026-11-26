@@ -122,12 +122,18 @@
   border-top: 2px solid currentColor;
   border-right: 2px solid currentColor;
 }
-.page-arrow:first-child::before {
+.page-arrow.previous-arrow::before {
+  transform: rotate(225deg);
+}
+.page-arrow.next-arrow::before {
+  transform: rotate(45deg);
+}
+/* .page-arrow:first-child::before {
   transform: rotate(225deg);
 }
 .page-arrow:last-child::before {
   transform: rotate(45deg);
-}
+} */
 .page-arrow:hover:not(:disabled) {
   color: #252525;
   transform: scale(1.2);

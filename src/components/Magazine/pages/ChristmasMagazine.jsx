@@ -17,7 +17,7 @@ function ChristmasPage({ subtitle, title, description, pageNumber, language }) {
   );
 }
 
-function ChristmasMagazine({ language }) {
+function ChristmasMagazine({ language, onHome }) {
   const [currentPage, setCurrentPage] = useState(() =>
     Number(localStorage.getItem("christmasCurrentPage") || 0),
   );
@@ -257,8 +257,11 @@ function ChristmasMagazine({ language }) {
       </div>
 
       <div className="page-controls">
+        <button className="back-to-home" onClick={onHome}>
+          ← BACK
+        </button>
         <button
-          className="page-arrow"
+          className="page-arrow previous-arrow"
           onClick={previousPage}
           disabled={
             isMobile ? mobilePage === 0 || mobileAnimating : currentPage === 0
@@ -267,7 +270,7 @@ function ChristmasMagazine({ language }) {
         />
 
         <button
-          className="page-arrow"
+          className="page-arrow next-arrow"
           onClick={nextPage}
           disabled={
             isMobile
