@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Magazine from "./components/Magazine/Magazine";
 import ChristmasMagazine from "./components/Magazine/pages/ChristmasMagazine";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -31,7 +32,11 @@ function App() {
         setLanguage={setLanguage}
       />
       {activeIssue === null ? (
-        <Home onOpenIssue={setActiveIssue} language={language} />
+        <Home
+          onOpenIssue={setActiveIssue}
+          language={language}
+          setLanguage={setLanguage}
+        />
       ) : activeIssue === "dior" ? (
         <>
           {/* <button className="back-to-home" onClick={() => setActiveIssue(null)}>
@@ -50,6 +55,12 @@ function App() {
           />
         </>
       )}
+      <Footer
+        language={language}
+        setLanguage={setLanguage}
+        onOpenIssue={setActiveIssue}
+        onHome={() => setActiveIssue(null)}
+      />
     </div>
   );
 }

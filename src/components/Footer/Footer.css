@@ -1,0 +1,83 @@
+.home-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding: 45px 7% 35px;
+  box-sizing: border-box;
+ 
+  /* margin: 100px -7vw -65px; */
+  background: #f1ede9;
+  color: #514638;
+}
+.footer-column h3 {
+  font-family: "Bodoni Moda", serif;
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.footer-column.ua h3 {
+  font-family: "Playfair Display SC", serif;
+}
+.footer-column p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #716457;
+}
+.footer-column.ua p,
+.footer-column.ua button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+.footer-column button {
+  display: block;
+  padding: 0;
+  margin: 0 0 8px;
+  border: none;
+  background: transparent;
+  color: #716457;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: inherit;
+  cursor: pointer;
+}
+.footer-column button:hover,
+.footer-column button.active-language {
+  color: #30251f;
+}
+.footer-column button:hover {
+  font-size: 16px;
+}
+
+.footer-column .footer-brand {
+  margin: -9px 0 16px;
+  color: #514638;
+  font-family: "Bodoni Mode", serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.footer-button button:hover {
+  font-size: 25px;
+}
+@media (max-width: 650px) {
+  .home-footer {
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 0px -20px -45px;
+    padding: 35px 25px 30px;
+  }
+  .home-footer button {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer-column .footer-brand {
+    margin: 0 auto;
+  }
+}

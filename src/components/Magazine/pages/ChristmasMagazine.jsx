@@ -268,7 +268,6 @@ function ChristmasMagazine({ language, onHome }) {
           }
           aria-label="Previous page"
         />
-
         <button
           className="page-arrow next-arrow"
           onClick={nextPage}

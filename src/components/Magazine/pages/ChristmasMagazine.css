@@ -54,4 +54,7 @@
   .christmas-page-content p {
     font-size: 13px;
   }
+  .mobile-static-page {
+    box-shadow: 0 8px 25px rgba(50, 35, 25, 0.18);
+  }
 }

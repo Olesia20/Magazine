@@ -125,6 +125,27 @@
   letter-spacing: 15px;
 }
 @media (max-width: 650px) {
+  .christmas-cover-page {
+      box-shadow: 8px 10px 25px rgba(14, 13, 12, 0.466);
+    }
+  }
+  .christmas-cover-title {
+    font-size: 30px;
+  }
+  .christmas-cover-subtitle {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .christmas-cover-credit {
+    font-size: 14px;
+
+    top: 42%;
+    left: 5%;
+  }
+  .christmas-cover-brand {
+    font-size: 45px;
+    left: 2%;
+  }
   .christmas-preview .christmas-cover-title {
     top: 12%;
     left: 5%;
@@ -154,12 +175,13 @@
     font-size: clamp(19px, 6vw, 25px);
     letter-spacing: 5px;
   }
-  .christmas-preview .christmas-issue-number{
+  .christmas-preview .christmas-issue-number {
     bottom: 3%;
     font-size: 6px;
     letter-spacing: 3px;
   }
-  .christmas-preview .christmas-cover-page.ua .christmas-cover-subtitle, .christmas-preview .christmas-cover-page.ua .christmas-cover-credit {
+  .christmas-preview .christmas-cover-page.ua .christmas-cover-subtitle,
+  .christmas-preview .christmas-cover-page.ua .christmas-cover-credit {
     font-size: clamp(7px, 2.2vw, 9px);
   }
 }

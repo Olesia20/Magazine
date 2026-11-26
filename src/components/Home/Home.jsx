@@ -7,14 +7,6 @@ function Home({ onOpenIssue, language }) {
   const t = translation[language];
   return (
     <main className="home-page">
-      {/* <section className="home-intro">
-        <p className="home-overline">THE WORLD OF STYLE PRESENTS</p>
-        <h2>Stories Beyond Fashion</h2>
-        <p className="home-description">
-          Discover the stories, traditions, peaple and ideas that make our world
-          beautiful.
-        </p>
-      </section> */}
       <section className="issues-section" id="issues">
         <div className={`section-heading ${language}`}>
           <span>{t.homeSubtitle}</span>
@@ -45,10 +37,10 @@ function Home({ onOpenIssue, language }) {
             <div className={`issue-title ${language}`}>
               <h3>{t.diorIssueTitle}</h3>
               <p className="issue-category">{t.diorCategory}</p>
+              <span>{t.comingSoon}</span>
             </div>
           </article>
         </div>
-        <p className="header-issue">NON COMERTION PROJECT</p>
       </section>
     </main>
   );
