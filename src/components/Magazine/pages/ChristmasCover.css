@@ -127,7 +127,6 @@
 @media (max-width: 650px) {
   .christmas-cover-page {
       box-shadow: 8px 10px 25px rgba(14, 13, 12, 0.466);
-    }
   }
   .christmas-cover-title {
     font-size: 30px;
@@ -138,7 +137,6 @@
   }
   .christmas-cover-credit {
     font-size: 14px;
-
     top: 42%;
     left: 5%;
   }
